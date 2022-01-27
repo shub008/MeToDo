@@ -106,11 +106,11 @@
         android:textStyle="bold"
         android:text="Submit"
         android:layout_marginTop="20sp"
-        android:layout_marginRight="10sp"
+        android:layout_marginRight="20sp"
         android:layout_marginLeft="200sp"
         android:id="@+id/submit"
         android:textSize="20sp"
-     android:background="@drawable/custom_button"
+     android:backgroundTint="#0B365C"
         android:layout_height="wrap_content">
     </Button>
 
