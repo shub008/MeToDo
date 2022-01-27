@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_height="match_parent">
+  <androidx.cardview.widget.CardView
+      android:layout_width="match_parent"
+      android:layout_margin="1sp"
+      app:cardCornerRadius="10sp"
+      android:backgroundTint="#ccc"
+      android:layout_height="100sp">
+<!--      <TextView-->
+<!--          android:layout_width="match_parent"-->
+<!--          android:id="@+id/date"-->
+<!--          android:textSize="20sp"-->
+<!--          android:gravity="center"-->
+<!--          android:textStyle="bold"-->
+<!--          android:layout_marginTop="5sp"-->
+<!--          android:textColor="#04178A"-->
+<!--          android:layout_marginRight="250sp"-->
+<!--          android:layout_gravity="top"-->
+<!--          android:layout_height="wrap_content">-->
+<!--      </TextView>-->
+      <RelativeLayout
+          android:layout_width="match_parent"
+          android:layout_gravity="center"
+     android:layout_marginTop="6sp"
+          android:layout_marginRight="5sp"
+          android:layout_marginLeft="5sp"
+          android:layout_height="wrap_content">
+
+          <TextView
+              android:layout_width="150sp"
+              android:hint="title"
+              android:gravity="center"
+              android:textSize="25sp"
+              android:textStyle="bold"
+              android:layout_marginRight="2dp"
+              android:background="#51F8D2"
+              android:layout_height="80sp"
+              android:id="@+id/title"/>
+
+
+
+          <TextView
+              android:layout_width="match_parent"
+              android:hint="task"
+              android:gravity="center_vertical"
+              android:textSize="20sp"
+              android:background="#47A2F1"
+              android:maxLength="20"
+              android:id="@+id/content"
+              android:shadowRadius="@integer/material_motion_duration_long_1"
+              android:layout_toRightOf="@+id/title"
+              android:layout_height="80sp">
+
+          </TextView>
+      </RelativeLayout>
+
+
+
+  </androidx.cardview.widget.CardView>
+
+</LinearLayout>

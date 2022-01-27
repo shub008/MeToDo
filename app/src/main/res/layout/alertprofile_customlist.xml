@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:background="#DAB5B2B2"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:text="TODO"
+        android:textColor="#101E9A"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:textSize="40sp"
+        android:layout_height="wrap_content">
+    </TextView>
+
+<com.google.android.material.textfield.TextInputLayout
+    android:layout_width="match_parent"
+    android:layout_margin="10dp"
+    app:startIconDrawable="@drawable/ic_baseline_subject_24"
+    android:hint="TITLE"
+    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+    app:counterMaxLength="30"
+    android:id="@+id/titleinput"
+    android:background="#FFFFFF"
+    app:endIconMode="clear_text"
+    android:layout_height="wrap_content">
+    <com.google.android.material.textfield.TextInputEditText
+        android:layout_width="match_parent"
+        android:textColor="#03090E"
+        android:id="@+id/titleedit"
+        android:layout_height="wrap_content">
+
+    </com.google.android.material.textfield.TextInputEditText>
+</com.google.android.material.textfield.TextInputLayout>
+<!--    <LinearLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:orientation="horizontal"-->
+<!--        android:weightSum="2"-->
+<!--        android:layout_margin="5sp"-->
+<!--        android:layout_height="wrap_content">-->
+
+<!--    <com.google.android.material.textfield.TextInputLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_margin="10sp"-->
+<!--       android:layout_weight=".2"-->
+<!--        app:startIconDrawable="@drawable/date"-->
+<!--        android:hint="DATE"-->
+<!--        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"-->
+<!--        app:counterMaxLength="30"-->
+<!--        android:id="@+id/titledate"-->
+<!--        android:background="#68D7ED"-->
+<!--        app:endIconMode="clear_text"-->
+<!--        android:layout_height="wrap_content">-->
+<!--        <com.google.android.material.textfield.TextInputEditText-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:id="@+id/etdate"-->
+<!--            android:layout_height="wrap_content">-->
+
+<!--        </com.google.android.material.textfield.TextInputEditText>-->
+<!--    </com.google.android.material.textfield.TextInputLayout>-->
+<!--        <Button-->
+<!--            android:layout_weight="1.8"-->
+<!--            android:gravity="center"-->
+<!--            android:background="@drawable/date"-->
+<!--            android:layout_gravity="center"-->
+<!--            android:id="@+id/date_picker_btn"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content">-->
+<!--        </Button>-->
+<!--    </LinearLayout>-->
+<com.google.android.material.textfield.TextInputLayout
+    android:layout_width="match_parent"
+    android:layout_margin="10sp"
+    android:hint="TASK"
+    android:layout_marginTop="10sp"
+    app:endIconMode="clear_text"
+    app:endIconTintMode="src_atop"
+    app:startIconTintMode="src_atop"
+    android:id="@+id/taskinput"
+    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+    android:gravity="top"
+    app:errorEnabled="true"
+    app:helperText="Max Length 200"
+    app:helperTextEnabled="true"
+    app:counterMaxLength="200"
+    app:helperTextTextColor="#830202"
+
+    android:layout_height="380sp">
+    <com.google.android.material.textfield.TextInputEditText
+        android:layout_width="match_parent"
+        android:layout_height="380sp"
+        android:gravity="top"
+        android:maxEms="200"
+        android:textColor="#03090E"
+        android:id="@+id/taskedit"
+        android:layout_gravity="center">
+
+    </com.google.android.material.textfield.TextInputEditText>
+</com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:layout_width="match_parent"
+        android:textStyle="bold"
+        android:text="Submit"
+        android:layout_marginTop="20sp"
+        android:layout_marginRight="10sp"
+        android:layout_marginLeft="200sp"
+        android:id="@+id/submit"
+        android:textSize="20sp"
+     android:background="@drawable/custom_button"
+        android:layout_height="wrap_content">
+    </Button>
+
+</LinearLayout>

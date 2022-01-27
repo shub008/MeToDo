@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ListActivity"
+    tools:ignore="HardcodedText">
+
+   <ListView
+       android:id="@+id/listview"
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"
+       android:layout_margin="10sp"
+       tools:layout_editor_absoluteX="-28dp"
+       tools:layout_editor_absoluteY="-56dp"/>
+   <!--This will be the parent Floating Action Button-->
+   <!--After the implementation the Floating Action Button at
+        the bottom right corner as we have constrained accordingly-->
+   <!--After clicking the above button the
+       following two buttons will pop up.
+        So this button is considered as parent FAB-->
+   <!--After opening the application it looks like regular
+       FAB but after user clicks it, it extends-->
+   <!--This functionality has been handled in the MainActivity.java-->
+   <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+       android:id="@+id/add_fab"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_gravity="end"
+       android:layout_marginEnd="16dp"
+       android:layout_marginBottom="16dp"
+       android:backgroundTint="#ccc"
+       android:text="Actions"
+       app:icon="@drawable/ic_baseline_add_24"
+       app:layout_constraintBottom_toBottomOf="parent"
+       app:layout_constraintEnd_toEndOf="parent" />
+
+   <!--Floating action button for add alarm-->
+   <!--Make sure that you are constraining this
+       button to the parent button-->
+   <!--Make sure to add backgroundTint attribute to match
+        the entire application color-->
+   <!--because after changing the base application theme the color
+        of the FAB is set Blue as default-->
+   <com.google.android.material.floatingactionbutton.FloatingActionButton
+       android:id="@+id/task_delete_fab"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_marginBottom="24dp"
+       android:backgroundTint="#ccc"
+       app:fabSize="normal"
+       app:layout_constraintBottom_toTopOf="@+id/add_fab"
+       app:layout_constraintEnd_toEndOf="@+id/add_fab"
+       app:srcCompat="@drawable/ic_baseline_delete_sweep_24" />
+
+   <!--Action name text for the add alarm button-->
+   <!--Make sure that you are constraining this
+       Text to the add Alarm FAB button-->
+   <TextView
+       android:id="@+id/task_delete_text"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_marginEnd="8dp"
+       android:text="Delete All "
+       app:layout_constraintBottom_toBottomOf="@+id/task_delete_fab"
+       app:layout_constraintEnd_toStartOf="@+id/task_delete_fab"
+       app:layout_constraintTop_toTopOf="@+id/task_delete_fab" />
+
+   <!--Floating action button for add person-->
+   <!--Make sure that you are constraining this button
+       to the add Alarm FAB button-->
+   <!--Make sure to add backgroundTint attribute to match
+        the entire application color-->
+   <!--because after changing the base application theme
+        the color of the FAB is set Blue as default-->
+   <com.google.android.material.floatingactionbutton.FloatingActionButton
+       android:id="@+id/add_person_fab"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_marginBottom="24dp"
+       android:backgroundTint="#ccc"
+       app:fabSize="normal"
+       app:layout_constraintBottom_toTopOf="@+id/task_delete_fab"
+       app:layout_constraintEnd_toEndOf="@+id/task_delete_fab"
+       app:layout_constraintStart_toStartOf="@+id/task_delete_fab"
+       app:srcCompat="@drawable/ic_baseline_add_24" />
+
+   <!--Action name text for the add person button-->
+   <!--Make sure that you are constraining this Text
+        to the add Person FAB button-->
+   <TextView
+       android:id="@+id/add_person_action_text"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_marginEnd="8dp"
+       android:text="Add task"
+       app:layout_constraintBottom_toBottomOf="@+id/add_person_fab"
+       app:layout_constraintEnd_toStartOf="@+id/add_person_fab"
+       app:layout_constraintTop_toTopOf="@+id/add_person_fab" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
